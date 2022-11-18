@@ -31,6 +31,7 @@ sculer=torch.optim.lr_scheduler.StepLR(optim,step_size=1)
 '''训练'''
 epochs=50
 for epoch in range(epochs):
+    sculer.step()
     total_train=0
     for data in gen_train:
         img,label=data
